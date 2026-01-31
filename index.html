@@ -14,6 +14,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- 
+      REPLACE THIS FAVICON with your own logo:
+      Create a folder called "images" and put your favicon.png file there
+      Then change the href to: href="images/favicon.png"
+    -->
     <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/podcast.png">
 </head>
 <body class="font-sans bg-gray-50">
@@ -24,6 +29,10 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="#" class="text-2xl font-bold text-blue-700">TechWave</a>
+                    <!-- 
+                      If you have a logo image, replace the text above with:
+                      <img src="images/logo.png" alt="TechWave" class="h-10">
+                    -->
                 </div>
                 
                 <!-- Desktop Menu (Center) -->
@@ -71,24 +80,32 @@
         <!-- Banner/Hero Section -->
         <section id="home" class="relative bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16 md:py-24">
             <!-- Background Pattern -->
-            <div class="absolute inset-0 opacity-10">
-                <div class="absolute inset-0" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80'); background-size: cover; background-position: center;"></div>
+            <div class="absolute inset-0 opacity-1">
+                <div class="absolute inset-0" style="background-image: url('assets/hero-bg.png'); background-size: cover; background-position: center;">
+                </div>
             </div>
             
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="flex flex-col items-center text-center">
                     <!-- Podcast Circle with "New" Badge -->
-                    <div class="relative mb-8">
-                        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-8 border-white/30 shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="TechWave Podcast" class="w-full h-full object-cover">
+                    <div class="relative mb-8 flex justify-center items-center">
+                        <div class="relative w-48 h-48 md:w-64 md:h-64 flex items-center justify-center">
+                            
+                            <img src="assets/hero-circle.png" 
+                                 alt="Background Gradient" 
+                                 class="w-full h-full object-contain animate-[pulse_4s_infinite]">
+                    
+                            <img src="assets/microphone.png" 
+                                 alt="Microphone Icon" 
+                                 class="absolute inset-0 m-auto w-1/2 h-1/2 object-contain invert opacity-90">
+                    
+                            <div class="absolute top-4 right-4 bg-[#22C55E] text-black text-[10px] md:text-xs font-bold px-3 py-1 rounded-full shadow-lg z-10">
+                                NEW
+                            </div>
+                    
+                            <div class="absolute -inset-2 rounded-full border-2 border-purple-500/20 animate-ping"></div>
+                            <div class="absolute -inset-4 rounded-full border-2 border-pink-500/10 animate-pulse"></div>
                         </div>
-                        <!-- "New" Badge -->
-                        <div class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
-                            NEW
-                        </div>
-                        <!-- Visual Effects -->
-                        <div class="absolute -inset-4 rounded-full border-4 border-blue-400/30 animate-ping"></div>
-                        <div class="absolute -inset-8 rounded-full border-4 border-purple-400/20 animate-pulse"></div>
                     </div>
                     
                     <!-- Heading and Description -->
@@ -162,6 +179,10 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8">
                     <!-- Feature 1: Mobile Friendly -->
                     <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <!-- 
+                          If you have custom icons, replace the Font Awesome icon with:
+                          <img src="images/mobile-icon.png" alt="Mobile Friendly" class="h-12 w-12 mb-4">
+                        -->
                         <div class="text-blue-600 text-3xl mb-4">
                             <i class="fas fa-mobile-alt"></i>
                         </div>
@@ -208,74 +229,70 @@
             </div>
         </section>
 
-        <!-- Featured Episodes Section -->
-        <section id="episodes" class="py-16 md:py-24 bg-white">
+        <section id="episodes" class="py-16 md:py-24 bg-[#0F0721]">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12 md:mb-16">Featured Episodes</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12 md:mb-16">Featured Episodes</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Episode 1 -->
-                    <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                        <div class="relative h-48 bg-gradient-to-r from-blue-500 to-purple-600">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="text-white text-center p-4">
-                                    <i class="fas fa-play-circle text-6xl opacity-80"></i>
-                                    <div class="mt-4 font-bold text-xl">AI Revolution</div>
-                                </div>
+                    <div class="bg-[#1A0B3C] rounded-2xl overflow-hidden border border-white/5 hover:border-purple-500/50 transition duration-300 transform hover:-translate-y-2 group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="assets/ai.jpg" alt="AI Revolution" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                 <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
+                                    <div class="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1"></div>
+                                 </div>
                             </div>
-                            <div class="absolute bottom-4 right-4 bg-black/70 text-white text-sm px-3 py-1 rounded-full">
-                                45 min
+                            <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                                <img src="assets/clock.png" class="w-3 h-3 invert" alt="time"> 45 min
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-3">The AI Revolution: What's Next?</h3>
-                            <p class="text-gray-600 mb-4">Explore how artificial intelligence is transforming industries and what to expect in the next decade.</p>
-                            <a href="https://www.youtube.com/watch?v=ad79nYk2keg" target="_blank" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition duration-300">
-                                <i class="fab fa-youtube mr-2"></i> Watch on YouTube
+                            <h3 class="text-xl font-bold text-white mb-3">The AI Revolution: What's Next?</h3>
+                            <p class="text-gray-400 text-sm mb-4">Explore how artificial intelligence is transforming industries and what to expect in the next decade.</p>
+                            <a href="https://www.youtube.com/watch?v=ad79nYk2keg" target="_blank" class="inline-flex items-center text-purple-400 font-medium hover:text-purple-300 transition duration-300">
+                                Watch on YouTube →
                             </a>
                         </div>
                     </div>
                     
-                    <!-- Episode 2 -->
-                    <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                        <div class="relative h-48 bg-gradient-to-r from-green-500 to-teal-600">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="text-white text-center p-4">
-                                    <i class="fas fa-play-circle text-6xl opacity-80"></i>
-                                    <div class="mt-4 font-bold text-xl">Productivity</div>
-                                </div>
+                    <div class="bg-[#1A0B3C] rounded-2xl overflow-hidden border border-white/5 hover:border-purple-500/50 transition duration-300 transform hover:-translate-y-2 group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="assets/remote.jpg" alt="Productivity" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                 <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
+                                    <div class="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1"></div>
+                                 </div>
                             </div>
-                            <div class="absolute bottom-4 right-4 bg-black/70 text-white text-sm px-3 py-1 rounded-full">
-                                38 min
+                            <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                                <img src="assets/clock.png" class="w-3 h-3 invert" alt="time"> 38 min
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-3">Maximizing Productivity in Remote Work</h3>
-                            <p class="text-gray-600 mb-4">Focused on making the most of your time with effective strategies for remote and hybrid work environments.</p>
-                            <a href="https://www.youtube.com/watch?v=9FgBAy8LUEc" target="_blank" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition duration-300">
-                                <i class="fab fa-youtube mr-2"></i> Watch on YouTube
+                            <h3 class="text-xl font-bold text-white mb-3">Maximizing Productivity in Remote Work</h3>
+                            <p class="text-gray-400 text-sm mb-4">Focused on making the most of your time with effective strategies for remote and hybrid work environments.</p>
+                            <a href="https://www.youtube.com/watch?v=9FgBAy8LUEc" target="_blank" class="inline-flex items-center text-purple-400 font-medium hover:text-purple-300 transition duration-300">
+                                Watch on YouTube →
                             </a>
                         </div>
                     </div>
                     
-                    <!-- Episode 3 -->
-                    <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-                        <div class="relative h-48 bg-gradient-to-r from-orange-500 to-red-600">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="text-white text-center p-4">
-                                    <i class="fas fa-play-circle text-6xl opacity-80"></i>
-                                    <div class="mt-4 font-bold text-xl">Data Science</div>
-                                </div>
+                    <div class="bg-[#1A0B3C] rounded-2xl overflow-hidden border border-white/5 hover:border-purple-500/50 transition duration-300 transform hover:-translate-y-2 group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="assets/data.jpg" alt="Data Science" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                 <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
+                                    <div class="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1"></div>
+                                 </div>
                             </div>
-                            <div class="absolute bottom-4 right-4 bg-black/70 text-white text-sm px-3 py-1 rounded-full">
-                                52 min
+                            <div class="absolute bottom-4 right-4 bg-black/70 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                                <img src="assets/clock.png" class="w-3 h-3 invert" alt="time"> 52 min
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-3">Data Science Career Paths in 2024</h3>
-                            <p class="text-gray-600 mb-4">Insider experience working with data and what to expect in the next decade for data professionals.</p>
-                            <a href="https://www.youtube.com/watch?v=xC-c7E5PK0Y" target="_blank" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition duration-300">
-                                <i class="fab fa-youtube mr-2"></i> Watch on YouTube
+                            <h3 class="text-xl font-bold text-white mb-3">Data Science Career Paths in 2024</h3>
+                            <p class="text-gray-400 text-sm mb-4">Insider experience working with data and what to expect in the next decade for data professionals.</p>
+                            <a href="https://www.youtube.com/watch?v=xC-c7E5PK0Y" target="_blank" class="inline-flex items-center text-purple-400 font-medium hover:text-purple-300 transition duration-300">
+                                Watch on YouTube →
                             </a>
                         </div>
                     </div>
@@ -293,7 +310,12 @@
                     <div class="lg:w-2/5 flex justify-center">
                         <div class="relative">
                             <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Alex Kumar" class="w-full h-full object-cover">
+                                <!-- 
+                                  REPLACE HOST IMAGE with your own:
+                                  Put your host-photo.png file in the "images" folder
+                                  Then change the src to: src="images/host-photo.png"
+                                -->
+                                <img src="assets/host.png" alt="Alex Kumar" class="w-full h-full object-cover">
                             </div>
                             <!-- Visual Effect -->
                             <div class="absolute -inset-4 rounded-full border-4 border-blue-400/30 animate-pulse"></div>
@@ -318,6 +340,10 @@
                             
                             <!-- Social Media Icons -->
                             <div class="flex space-x-4">
+                                <!-- 
+                                  If you have custom social media icons, replace these with:
+                                  <a href="#"><img src="images/twitter-icon.png" alt="Twitter" class="h-10 w-10"></a>
+                                -->
                                 <a href="#" class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition duration-300">
                                     <i class="fab fa-twitter"></i>
                                 </a>
@@ -357,6 +383,10 @@
             <div class="text-center">
                 <!-- Logo -->
                 <div class="text-3xl font-bold text-white mb-6">TechWave</div>
+                <!-- 
+                  If you have a footer logo image, replace the text above with:
+                  <img src="images/logo-white.png" alt="TechWave" class="h-12 mx-auto mb-6">
+                -->
                 
                 <!-- Platform Information -->
                 <div class="flex flex-wrap justify-center gap-6 mb-8">
@@ -376,24 +406,13 @@
                 
                 <!-- Copyright -->
                 <div class="border-t border-gray-700 pt-8 mt-8">
-                    <p class="text-gray-400">&copy; 2023 TechWave Podcast. All rights reserved.</p>
+                    <p class="text-gray-400">&copy; 2025 TechWave Podcast. All rights reserved.</p>
                     <p class="text-gray-500 text-sm mt-2">Made with <i class="fas fa-heart text-red-500"></i> for tech enthusiasts worldwide</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Mobile Menu Toggle Script (Pure CSS, no JavaScript) -->
-    <style>
-        /* Pure CSS mobile menu toggle */
-        #mobile-menu-toggle:checked ~ #mobile-menu {
-            display: block;
-        }
-    </style>
-    
-    <!-- Hidden checkbox for mobile menu toggle -->
-    <input type="checkbox" id="mobile-menu-toggle" class="hidden">
-    
     <!-- Custom CSS for animations -->
     <style>
         /* Smooth scroll behavior */
@@ -413,16 +432,6 @@
         
         .float-animation {
             animation: float 3s ease-in-out infinite;
-        }
-        
-        /* Button hover effects */
-        .btn-hover-effect {
-            transition: all 0.3s ease;
-        }
-        
-        .btn-hover-effect:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
     </style>
 </body>
